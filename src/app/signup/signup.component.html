@@ -4,6 +4,18 @@
     <div style="color : green" *ngIf='success'>{{success}}</div>
     <form name='signupForm' (submit)="doSignup()">
         <table>
+          <tr>
+            <td>Lastname:</td>
+            <td><input type='text' name='lastname' [(ngModel)]="lastname"></td>
+          </tr>
+          <tr>
+            <td>Firstname:</td>
+            <td><input type='text' name='firstname' [(ngModel)]="firstname"></td>
+          </tr>
+          <tr>
+            <td>Email:</td>
+            <td><input type='text' name='email' [(ngModel)]="email"></td>
+          </tr>
             <tr>
                 <td>Username:</td>
                 <td><input type='text' name='username' [(ngModel)]="username"></td>

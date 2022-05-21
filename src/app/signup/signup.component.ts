@@ -11,7 +11,9 @@ styleUrls: ['./signup.component.css']
 export class SignupComponent implements OnInit {
 
 	constructor(private authService: AuthService) { }
-
+  lastname: string = '';
+  firstname: string = '';
+  email: string = '';
 	username: string = '';
 	password: string = '';
 
@@ -34,8 +36,24 @@ export class SignupComponent implements OnInit {
 	}
 
 	doSignup() {
-		if(this.username !== '' && this.username !== null && this.password !== '' && this.password !== null && this.selectedRoles.length > 0) {
-			const request: Request = { userName: this.username, userPwd: this.password, roles: this.selectedRoles};
+		if(
+		this.lastname !== '' &&
+    this.lastname !== null &&
+    this.firstname !== '' &&
+    this.firstname !== null &&
+    this.email !== '' &&
+    this.email !== null &&
+		this.username !== '' &&
+		this.username !== null &&
+		this.password !== '' &&
+		this.password !== null &&
+		this.selectedRoles.length > 0) {
+		const request: Request = {  lastName: this.lastname,
+                                firstName: this.firstname,
+                                email: this.email,
+                                userName: this.username,
+                                userPwd: this.password,
+                                roles: this.selectedRoles};
 
 			this.authService.signup(request).subscribe((result)=> {
 				//console.log(result);
