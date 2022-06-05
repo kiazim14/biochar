@@ -34,10 +34,10 @@ export class GreetingService {
 		}));
 	}
 
-	getByAnonymousRole(): Observable<any>{
-		return this.http.get<any>(this.baseUrl + '/anonymous', {responseType: 'text' as 'json'}).pipe(map((resp) => {
-			return resp;
-		}));
+// 	getByAnonymousRole(): Observable<any>{
+// 		return this.http.get<any>(this.baseUrl + '/anonymous', {responseType: 'text' as 'json'}).pipe(map((resp) => {
+// 			return resp;
+// 		}));
 	}
 
-}
+

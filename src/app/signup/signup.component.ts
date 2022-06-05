@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
-import { Request } from '../request.model';
+import { AuthService } from '../services/auth.service';
+import { RequestSignup } from '../models/request-signup';
 import { catchError } from 'rxjs/operators';
 
 @Component({
@@ -9,6 +9,7 @@ templateUrl: './signup.component.html',
 styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+
 
 	constructor(private authService: AuthService) { }
   lastname: string = '';
@@ -20,7 +21,7 @@ export class SignupComponent implements OnInit {
 	user_roles: any = [
 		{name:'User', value:'ROLE_USER', selected: false},
 		{name:'Admin', value:'ROLE_ADMIN', selected: false},
-		{name:'Anonymous', value:'ROLE_ANONYMOUS', selected: false},
+		//{name:'Anonymous', value:'ROLE_ANONYMOUS', selected: false},
 	]
 
 	selectedRoles: string[] = [];
@@ -48,7 +49,7 @@ export class SignupComponent implements OnInit {
 		this.password !== '' &&
 		this.password !== null &&
 		this.selectedRoles.length > 0) {
-		const request: Request = {  lastName: this.lastname,
+		const request: RequestSignup = {  lastName: this.lastname,
                                 firstName: this.firstname,
                                 email: this.email,
                                 userName: this.username,

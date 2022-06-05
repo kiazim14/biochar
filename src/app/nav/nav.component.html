@@ -1,0 +1,38 @@
+<nav  class="navbar navbar-default" style="background-color: #51aef3;">
+
+    <div class="navbar-header">Assustem_DTS</div>
+
+    <div *ngIf="!isSignedin">
+      <ul class="nav navbar-nav pull-xs-right">
+                 <li class="nav-item"> <a routerLink="/signin" class="nav-link">Signin</a>
+                   /
+                 <a routerLink="/signup" class="nav-link">Singnup</a></li>
+          </ul>
+    </div>
+    <div *ngIf="isSignedin">
+        <ul>
+          <li><a routerLink="/products" class="nav-link">List</a>
+            /
+          <a routerLink="/add" class="nav-link">Add</a></li>
+        </ul>
+        <ul>
+        <p>Welcome back, {{ signedinUser }}!</p>
+
+        <div *ngFor="let greet of greeting">
+          {{greet}}
+        </div>
+        <p><a style="text-decoration: underline; cursor: pointer;" (click)="doSignout()">Signout</a></p>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+  <br>
+  <hr>
+  <div class="card">
+    <div class="card-body">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+

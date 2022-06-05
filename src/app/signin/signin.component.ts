@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { AuthService } from '../auth.service';
-import { Request } from '../request.model';
+import { AuthService } from '../services/auth.service';
+import { RequestSignin } from '../models/request-signin';
 
 @Component({
 selector: 'app-signin',
@@ -29,17 +29,11 @@ export class SigninComponent implements OnInit {
 
 	doSignin() {
 		if(this.username !== '' && this.username !== null && this.password !== '' && this.password !== null) {
-			const request: Request = { userName: this.username, userPwd: this.password};
+			const request: RequestSignin = { userName: this.username, userPwd: this.password};
 
-			this.authService.signin(request).subscribe((result)=> {
-				//this.router.navigate(['/home']);
-				this.router.navigateByUrl('home');
-			}, () => {
-				this.error = 'Either invalid credentials or something went wrong';
-			});
-		} else {
-			this.error = 'Invalid Credentials';
-		}
+			this.authService.signin(request).subscribe
+			((response) => console.log (response), error => console.log (error));
+		this.router.navigateByUrl('/home');
 	}
-
+}
 }

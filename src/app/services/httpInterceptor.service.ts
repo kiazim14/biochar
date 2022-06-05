@@ -2,13 +2,13 @@ import { HttpInterceptor, HttpRequest, HttpHandler, HttpEvent, HttpHeaders, Http
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-import { AuthService } from './auth.service';
- 
+import { AuthService } from '../services/auth.service';
+
 @Injectable()
 export class HttpInterceptorService implements HttpInterceptor {
- 
+
     constructor(private authService: AuthService) { }
- 
+
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
         if (this.authService.isUserSignedin() && this.authService.getToken()) {
             const request = req.clone({
@@ -25,7 +25,7 @@ export class HttpInterceptorService implements HttpInterceptor {
 				})
 			);
         }
-       
+
 		return next.handle(req);
     }
 

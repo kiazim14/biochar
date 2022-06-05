@@ -1,0 +1,16 @@
+<h3>Product details</h3>
+
+<div *ngIf="product">
+  <div>
+    <label>Nom: </label> {{product["name"]}}
+  </div>
+  <div>
+    <label>Slug: </label> {{product["quantity"]}}
+  </div>
+  <div>
+    <label>Electron: </label> {{product["price"]}}
+  </div>
+
+  <button (click)="list()" class="btn btn-primary">Product_List_back</button><br>
+</div>
+
