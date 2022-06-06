@@ -3,8 +3,5 @@ export class Product {
     name: string;
     quantity: string;
     price: number;
-
-   constructor(){}
-
-
+    //constructor(){}
 }

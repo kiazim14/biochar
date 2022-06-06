@@ -12,11 +12,12 @@ import {ActivatedRoute, Router} from '@angular/router';
 export class CreateProductComponent implements OnInit {
 
   submitted = false;
-  product: Product;
+  product: Product = new Product();
 
   constructor(private productService: ProductService, private router: Router) {
   }
   ngOnInit() {
+   console.log("product.name : " + this.product.name);
   }
   newProduct () {
     this.submitted = false;
