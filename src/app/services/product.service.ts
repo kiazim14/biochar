@@ -12,7 +12,7 @@ const httpHeaders = {
   providedIn: 'root'
 })
 export class ProductService {
-private baseUrl = 'http://localhost:8082/';
+private baseUrl = 'http://localhost:8083/';
 
   constructor(private http: HttpClient) { }
 
