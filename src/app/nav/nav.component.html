@@ -1,13 +1,16 @@
-<nav  class="navbar navbar-default" style="background-color: #51aef3;">
+<!--<nav  class="navbar navbar-default" style="background-color: #51aef3;">-->
 
-    <div class="navbar-header">Assustem_DTS</div>
+  <nav class="navbar navbar-expand-lg navbar-light">
 
-    <div *ngIf="!isSignedin">
-      <ul class="nav navbar-nav pull-xs-right">
-                 <li class="nav-item"> <a routerLink="/signin" class="nav-link">Signin</a>
-                   /
-                 <a routerLink="/signup" class="nav-link">Singnup</a></li>
-          </ul>
+    <div class="navbar-header">Assystem_DTS</div>
+
+    <div class="end navbar-nav">
+    <div class="signin "*ngIf="!isSignedin">
+      <a routerLink="/signin" class="nav-link">Signin</a>
+    </div>
+    <div class="end navbar-nav">
+      <a routerLink="/signup" class="nav-link">Singnup</a>
+    </div>
     </div>
     <div *ngIf="isSignedin">
         <ul>
