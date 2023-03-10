@@ -16,15 +16,16 @@
             <td>Email:</td>
             <td><input type='text' name='email' [(ngModel)]="email"></td>
           </tr>
-            <tr>
+          <tr>
                 <td>Username:</td>
                 <td><input type='text' name='username' [(ngModel)]="username"></td>
-            </tr>
-            <tr>
+          </tr>
+          <tr>
                 <td>Password:</td>
                 <td><input type='password' name='password' [(ngModel)]="password"/></td>
-            </tr>
-            <tr>
+          </tr>
+
+          <tr>
                 <td>Roles:</td>
                 <td>
                     <div *ngFor="let role of user_roles">
@@ -35,11 +36,12 @@
                         </label>
                     </div>
                 </td>
-            </tr>
-            <tr>
+          </tr>
+
+          <tr>
                 <td><input name="submit" type="submit" value="Signup"/></td>
                 <td>Have account? <a href="/signin" routerLink="/signin">Signin</a></td>
-            </tr>
+          </tr>
         </table>
     </form>
 </div>
