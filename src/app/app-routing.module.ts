@@ -10,9 +10,7 @@ import { DetailsProductComponent } from './details-product/details-product.compo
 import { UpdateProductComponent } from './update-product/update-product.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'products', pathMatch: 'full' },
-  { path: '', redirectTo: 'login', pathMatch: 'full' },
-	{ path: 'home', component: HomeComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 	{ path: 'home', component: HomeComponent },
 	{ path: 'signin', component: SigninComponent },
 	{ path: 'signup', component: SignupComponent },
