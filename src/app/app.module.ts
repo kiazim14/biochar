@@ -15,7 +15,6 @@ import { ListProductComponent } from './list-product/list-product.component';
 import { UpdateProductComponent } from './update-product/update-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import { NavabarComponent } from './navabar/navabar.component';
 
 
 @NgModule({
@@ -29,7 +28,7 @@ import { NavabarComponent } from './navabar/navabar.component';
     DetailsProductComponent,
     ListProductComponent,
     UpdateProductComponent,
-    NavabarComponent
+    NavbarComponent
 
   ],
   imports: [

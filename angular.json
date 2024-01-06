@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-spring-boot-jwt-auth:build:production"
+              "buildTarget": "angular-spring-boot-jwt-auth:build:production"
             },
             "development": {
-              "browserTarget": "angular-spring-boot-jwt-auth:build:development"
+              "buildTarget": "angular-spring-boot-jwt-auth:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-spring-boot-jwt-auth:build"
+            "buildTarget": "angular-spring-boot-jwt-auth:build"
           }
         },
         "test": {
