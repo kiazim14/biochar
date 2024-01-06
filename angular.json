@@ -109,6 +109,5 @@
         }
       }
     }
-  },
-  "defaultProject": "angular-spring-boot-jwt-auth"
+  }
 }
